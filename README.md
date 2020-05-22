@@ -1,4 +1,9 @@
-# ReedsyFrontendChallenge
+# Reedsy Front End Engineer Challenge
+
+## 1. About Me
+## 2. General
+## 3. Styling
+## 4. SPA
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
 

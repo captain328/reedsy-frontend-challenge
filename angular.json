@@ -12,7 +12,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "reedsy",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "reedsy-frontend-challenge"
+    }
+  },
+  "defaultProject": "reedsy-frontend-challenge",
+  "cli": {
+    "analytics": false
+  }
 }

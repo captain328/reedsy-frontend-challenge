@@ -1,0 +1,16 @@
+<div class="d-flex align-items-center py-3 px-4" [class.bg-white]="index % 2 === 0">
+  <div class="pr-3 flex-grow-1 flex-basis-0">
+    <div class="d-flex align-items-center">
+      <h2 class="mr-2 color-mandalay">{{index + 1}}. {{book.title}}</h2>(<span>{{book.rating}}/10</span>)
+    </div>
+    <span class="font-italic color-dove-gray">{{book.author}}</span>
+    <p class="pt-3">{{book.synopsis | truncateText:200}}</p>
+    <div class="d-flex align-items-center">
+      <button class="btn btn-primary btn-sm text-white" [class.btn-outline]="book.upvoted">{{book.upvoted ? 'Upvoted' : 'Upvote'}}</button>
+      <span class="ml-3">Upvoted {{book.upvotes}} times</span>
+    </div>
+  </div>
+  <div class="book-cover-wrapper overflow-hidden">
+    <img [src]="book.cover" [alt]="book.title">
+  </div>
+</div>

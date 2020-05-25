@@ -1,24 +1,48 @@
+// Tags
 html, body {
   margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
 }
 
 body {
-  font-family: sans-serif;
   background-color: #FAF9F4;
+  color: #46443c;
 }
 
 h1 {
-  padding: 25px;
+  padding: 2rem;
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 600;
 }
 
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+
+img {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: #A0A0A0 0 0 3px;
+  height: 100%;
+}
+
+// Common
 .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
 
+// Header
 .top-logo {
   background-color: #CCCCCC;
   border-radius: 5px;
@@ -27,17 +51,15 @@ h1 {
 
 .top-menu ul {
   list-style: none;
-}
-
-.top-menu ul li {
-  display: inline-block;
-  padding: 10px;
-}
-
-.top-menu ul li.active {
-  background-color: #F1BE01;
-  border-radius: 5px;
-  color: white;
+  li {
+    display: inline-block;
+    padding: 10px;
+  }
+  li.active {
+    background-color: #F1BE01;
+    border-radius: 5px;
+    color: white;
+  }
 }
 
 .top-actions .container {
@@ -46,10 +68,18 @@ h1 {
   align-items: center;
 }
 
-.main .container {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: #a0a0a0 0 8px 10px;
+// Content
+.main {
+  padding-bottom: 40px;
+  .container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: #a0a0a0 0 8px 10px;
+  }
+}
+
+.top-voted {
+  padding: 20px;
 }
 
 .featured-book {
@@ -58,19 +88,17 @@ h1 {
   position: relative;
   padding: 25px;
   align-items: center;
-}
-
-.featured-book .book-info {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.featured-book .img-container {
-  height: 350px;
-}
-
-.featured-book .img-container img {
-  height: 100%;
+  .book-info {
+    padding-left: 20px;
+    padding-right: 20px;
+    .title {
+      padding-top: 10px;
+      margin: 0;
+    }
+  }
+  .img-container {
+    height: 400px;
+  }
 }
 
 .recommended {
@@ -81,12 +109,6 @@ h1 {
   padding: 5px;
   color: white;
   border-bottom-left-radius: 10px;
-}
-
-img {
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: #A0A0A0 0 0 3px;
 }
 
 .books-list {
@@ -100,9 +122,8 @@ img {
   position: relative;
   flex: 0 0 30%;
   max-width: 30%;
-  margin-left: 10px;
-  margin-right: 10px;
-  padding: 10px;
+  margin: 0.5rem;
+  padding:20px 10px 10px 10px;
 }
 
 .book .position {
@@ -112,32 +133,35 @@ img {
   border-radius: 50%;
   color: #E0C208;
   border: #E0C208 2px solid;
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   text-align: center;
-  line-height: 35px;
-  font-size: 20px;
+  line-height: 30px;
+  font-size: 16px;
 }
 
 .book .img-container {
   height: 200px;
+  text-align: center;
 }
 
-.book .img-container img {
-  height: 100%;
-}
-
+// Footer
 footer {
   background-color: #292929;
   color: white;
   text-align: center;
-}
-
-footer ul {
-  list-style: none;
-}
-
-footer ul li {
-  display: inline-block;
-  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  ul {
+    list-style: none;
+    margin: 0;
+    li {
+      display: inline-block;
+      padding: 10px;
+    }
+  }
 }

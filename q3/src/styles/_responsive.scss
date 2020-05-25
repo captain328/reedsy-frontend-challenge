@@ -21,3 +21,15 @@
     max-width: 1140px;
   }
 }
+
+@media (max-width: 768px) {
+  .featured-book {
+    display: block;
+  }
+  .books-list {
+    display: block;
+  }
+  .book {
+    max-width: 100%;
+  }
+}

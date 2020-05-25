@@ -43,13 +43,25 @@ img {
 }
 
 // Header
+.top-actions {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .top-logo {
   background-color: #CCCCCC;
   border-radius: 5px;
   padding: 8px 70px 8px 70px;
+  margin-left: 30px;
+}
+
+.top-menu {
+  margin-right: 30px;
 }
 
 .top-menu ul {
+  margin-top: 0;
+  margin-bottom: 0;
   list-style: none;
   li {
     display: inline-block;
@@ -66,6 +78,13 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.nav-button {
+  display: none;
+  margin-right: 30px;
+  font-size: 1.8rem;
+  color: black;
 }
 
 // Content

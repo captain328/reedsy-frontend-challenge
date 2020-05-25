@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Book } from '../core/models/book';
-import { PageSizeDefault } from '../core/models/paginator';
+import { PageSizeDefault, PageSizeSmall } from '../core/models/paginator';
 import { BooksService } from '../core/services/books.service';
 import { ToastrService } from '../core/services/toastr.service';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'reedsy-books',
@@ -13,13 +15,13 @@ import { ToastrService } from '../core/services/toastr.service';
 export class BooksComponent implements OnInit {
 
   books: Book[] = [];
+  page = this.route.snapshot.queryParams.page || 0;
   total = 0;
-  skip = 0;
-  take = PageSizeDefault;
-
-  isLoading = false;
+  take = PageSizeSmall;
 
   constructor(
+    private route: ActivatedRoute,
+    private spinner: NgxSpinnerService,
     private booksService: BooksService,
     private toastrService: ToastrService,
   ) { }
@@ -28,16 +30,18 @@ export class BooksComponent implements OnInit {
     this.loadBooks();
   }
 
+
+
   async loadBooks() {
     try {
-      this.isLoading = true;
-      const res = await this.booksService.books(this.skip, this.take).toPromise();
+      this.spinner.show();
+      const res = await this.booksService.books(this.page * this.take, this.take).toPromise();
       this.books = res.data;
       this.total = res.count;
     } catch (e) {
       this.toastrService.error(e, 'Failed to fetch books data.');
     } finally {
-      this.isLoading = false;
+      this.spinner.hide();
     }
   }
 }

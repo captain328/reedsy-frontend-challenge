@@ -2,8 +2,12 @@
   <div class="row">
     <div class="col-lg-6 col-md-8 col-sm-12 mx-auto bg-color-ecru-white pt-4 px-0 books-list">
       <h1 class="text-primary text-center pb-2">Top books of all time</h1>
-      <reedsy-book-card *ngFor="let book of books; let i=index" [book]="book" [index]="i+skip">
+      <reedsy-book-card *ngFor="let book of books; let i=index" [book]="book" [index]="i + page * take">
       </reedsy-book-card>
+      <pagination-controls (pageChange)="pageChange($event)"></pagination-controls>
     </div>
   </div>
+  <ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="default" color="#fff" type="square-jelly-box" [fullScreen]="true">
+    <p style="color: white">Loading...</p>
+  </ngx-spinner>
 </div>

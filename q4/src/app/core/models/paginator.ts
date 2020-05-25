@@ -4,4 +4,4 @@ export interface Paginator<T> {
 }
 
 export const PageSizeDefault = 10;
-export const PageSizeSmall = 5;
+export const PageSizeSmall = 3;

@@ -1,1 +1,23 @@
-<div>book details page</div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-md-8 col-sm-12 mx-auto bg-white p-4 book-details">
+      <div class="d-flex flex-wrap align-items-center">
+        <h1 class="text-primary text-center font-24 font-weight-bold">{{book.title}}</h1>
+        <div class="d-flex flex-grow-1 justify-content-end align-items-center">
+          <span class="mr-3">Upvoted {{book.upvotes}} times</span>
+          <button class="btn btn-primary btn-sm text-white" (click)="toggleVote()" [class.btn-outline-primary]="book.upvoted"
+                  [class.bg-white]="book.upvoted" [class.text-primary]="book.upvoted">{{book.upvoted ? 'Upvoted' : 'Upvote'}}</button>
+        </div>
+      </div>
+      <div class="font-italic">{{book.author}}</div>
+      <div class="text-center my-4 d-flex justify-content-center">
+        <div class="book-cover-wrapper overflow-hidden">
+          <img [src]="book.cover" [alt]="book.title">
+        </div>
+      </div>
+      <h2>Synopsis</h2>
+      <p>{{book.synopsis}}</p>
+      <div>Rating: {{book.rating}}/10</div>
+    </div>
+  </div>
+</div>

@@ -1,13 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
 
 
 const routes: Routes = [
-  {
-    path: '', component: AppComponent, children: [
-      { path: '', loadChildren: () => import('./books/books.module').then(m => m.BooksModule) }]
-  }
+  { path: '', loadChildren: () => import('./books/books.module').then(m => m.BooksModule) }
 ];
 
 @NgModule({

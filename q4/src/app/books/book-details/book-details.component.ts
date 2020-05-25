@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+import { Book } from '../../core/models/book';
+
 @Component({
   selector: 'reedsy-book-details',
   templateUrl: './book-details.component.html',
@@ -8,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class BookDetailsComponent implements OnInit {
 
-  book = this.route.snapshot.data.book;
+  book: Book = this.route.snapshot.data.book;
 
   constructor(
     private route: ActivatedRoute
@@ -16,6 +18,10 @@ export class BookDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  toggleVote() {
+    // TODO: add toggle vote handler
   }
 
 }

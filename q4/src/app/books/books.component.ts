@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Book } from '../core/models/book';
 import { PageSizeDefault } from '../core/models/paginator';
 import { BooksService } from '../core/services/books.service';
+import { ToastrService } from '../core/services/toastr.service';
 
 @Component({
   selector: 'reedsy-books',
@@ -19,7 +20,8 @@ export class BooksComponent implements OnInit {
   isLoading = false;
 
   constructor(
-    private booksService: BooksService
+    private booksService: BooksService,
+    private toastrService: ToastrService,
   ) { }
 
   ngOnInit(): void {
@@ -33,7 +35,7 @@ export class BooksComponent implements OnInit {
       this.books = res.data;
       this.total = res.count;
     } catch (e) {
-      // TODO: show error toast
+      this.toastrService.error(e, 'Failed to fetch books data.');
     } finally {
       this.isLoading = false;
     }

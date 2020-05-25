@@ -15,6 +15,6 @@
     </div>
   </div>
   <div class="book-cover-wrapper overflow-hidden">
-    <img [src]="book.cover" [alt]="book.title">
+    <a [routerLink]="book.slug"><img [src]="book.cover" [alt]="book.title"></a>
   </div>
 </div>

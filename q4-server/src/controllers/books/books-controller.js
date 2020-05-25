@@ -5,7 +5,7 @@ import Boom from 'boom';
 import BooksService from '../../services/books/books-service';
 
 function getBook(request, h) {
-  const books = JSON.parse(BooksService.getAllBooks(request)).books;
+  const [, books] = BooksService.getAllBooks(request);
   const book = books.find(b => b.slug === request.params.slug);
   if (!book) {
     throw Boom.notFound();
@@ -15,7 +15,8 @@ function getBook(request, h) {
 }
 
 function getBooksList(request, h) {
-  return BooksService.getAllBooks(request);
+  const [count, data] = BooksService.getAllBooks(request);
+  return { count, data };
 }
 
 export default {

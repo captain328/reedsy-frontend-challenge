@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class BookDetailsComponent implements OnInit {
 
-  slug = this.route.snapshot.params.slug;
+  book = this.route.snapshot.data.book;
 
   constructor(
     private route: ActivatedRoute

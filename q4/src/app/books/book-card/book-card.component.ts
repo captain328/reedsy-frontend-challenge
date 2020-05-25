@@ -16,4 +16,8 @@ export class BookCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  toggleVote() {
+    // TODO: add toggle vote handler
+  }
+
 }

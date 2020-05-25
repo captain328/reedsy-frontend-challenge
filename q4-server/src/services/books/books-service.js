@@ -21,6 +21,6 @@ export default class BooksService {
     });
     const count = books.length;
     const data = take === -1 ? books.slice(skip) : books.slice(skip, skip + take);
-    return JSON.stringify({ count, data });
+    return [count, data];
   }
 }

@@ -1,0 +1,10 @@
+a {
+  cursor: pointer;
+  color: $anzac;
+  &:hover {
+    color: $anzac;
+  }
+  &.text-primary:focus, &.text-primary:active {
+    color: $anzac !important;
+  }
+}

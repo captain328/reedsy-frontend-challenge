@@ -1,9 +1,18 @@
-# Webpack Frontend Starterkit
+# Reedsy Frontend Engineer challenge Styling project
 
-[![Dependabot badge](https://flat.badgen.net/dependabot/wbkd/webpack-starter?icon=dependabot)](https://dependabot.com/)
+This project is for styling assignment in reedsy frontend engineer challenge.
 
-A lightweight foundation for your next webpack based frontend project.
+The original `q3.html` file is not modified except in the following lines.
 
+- https://github.com/captain328/reedsy-frontend-challenge/blob/24c77b22975f96ba25e4555cc9aaf9958794db2e/q3/src/index.html#L5
+  new line for mobile responsive
+- https://github.com/captain328/reedsy-frontend-challenge/blob/24c77b22975f96ba25e4555cc9aaf9958794db2e/q3/src/index.html#L6
+  new line for google font import
+- https://github.com/captain328/reedsy-frontend-challenge/blob/24c77b22975f96ba25e4555cc9aaf9958794db2e/q3/src/index.html#L41
+  image url
+- https://github.com/captain328/reedsy-frontend-challenge/blob/24c77b22975f96ba25e4555cc9aaf9958794db2e/q3/src/index.html#L91
+- https://github.com/captain328/reedsy-frontend-challenge/blob/24c77b22975f96ba25e4555cc9aaf9958794db2e/q3/src/index.html#L120
+- https://github.com/captain328/reedsy-frontend-challenge/blob/24c77b22975f96ba25e4555cc9aaf9958794db2e/q3/src/index.html#L150
 
 ### Installation
 
@@ -22,11 +31,3 @@ npm start
 ```
 npm run build
 ```
-
-### Features:
-
-* ES6 Support via [babel](https://babeljs.io/) (v7)
-* SASS Support via [sass-loader](https://github.com/jtangelder/sass-loader)
-* Linting via [eslint-loader](https://github.com/MoOx/eslint-loader)
-
-When you run `npm run build` we use the [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin) to move the css to a separate file. The css file gets included in the head of the `index.html`.

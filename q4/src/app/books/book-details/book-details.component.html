@@ -18,6 +18,21 @@
       <h2>Synopsis</h2>
       <p>{{book.synopsis}}</p>
       <div>Rating: {{book.rating}}/10</div>
+
+      <h2 class="pt-30">Comments</h2>
+      <div class="comment-list" *ngIf="book.comments && book.comments.length">
+        <div class="comment pb-4 font-12" *ngFor="let comment of book.comments">
+          <div class="content font-italic">{{comment.content}}</div>
+          <div class="text-right">commented {{comment.date | date:'MMM dd yyyy'}}</div>
+          <div class="text-right">{{comment.author || 'Anonymous'}}</div>
+        </div>
+      </div>
+      <form class="w-100" [formGroup]="commentForm" (submit)="addComment($event)">
+        <label class="w-100">
+          <textarea class="form-control" formControlName="comment" rows="4" placeholder="comment"></textarea>
+        </label>
+        <button type="submit" [disabled]="!commentForm.valid" class="btn btn-primary btn-small text-white">Add Comment</button>
+      </form>
     </div>
   </div>
 </div>

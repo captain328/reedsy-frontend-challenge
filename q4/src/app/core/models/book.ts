@@ -1,3 +1,5 @@
+import { BookComment } from './book-comment';
+
 export interface Book {
   author: string;
   cover: string;
@@ -7,4 +9,5 @@ export interface Book {
   title: string;
   upvoted: boolean;
   upvotes: number;
+  comments: BookComment[];
 }

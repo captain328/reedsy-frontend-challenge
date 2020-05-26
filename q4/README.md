@@ -1,32 +1,39 @@
-# Reedsy Front End Engineer Challenge
+# Reedsy Frontend Engineer challenge SPA project
 
-## 1. About Me
-## 2. General
-## 3. Styling
-## 4. SPA
+### Overview
+This project is for SPA assignment in reedsy frontend engineer challenge.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+Framework: Angular 9.1
 
-## Development server
+This project uses Typescript and SASS.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+#### Features
+* Display a list of books
+* Show book details
+* Books list pagination
+* Search using book title and synopsis
+* Comment feature in book details page
 
-## Code scaffolding
+The api server is modified a little for the books list pagination and search functionality.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The api documentation can be found here.
 
-## Build
+https://github.com/captain328/reedsy-frontend-challenge/blob/master/q4-server/README.md
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Installation
 
-## Running unit tests
+```
+npm install
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Start Development Server
 
-## Running end-to-end tests
+```
+npm start
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Production Build
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
+npm run build
+```

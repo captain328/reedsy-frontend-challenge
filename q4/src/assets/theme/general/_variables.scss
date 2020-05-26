@@ -13,6 +13,15 @@ $theme-colors: (
   primary: $anzac,
 );
 
+// Spacing
+$pixel-spacer: 5px !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+@for $i from 1 through 50 {
+  $spacers: map-merge($spacers, (
+    $i * 5: ($i * $pixel-spacer)
+  ));
+}
+
 // Button
 $btn-border-radius-sm: 7px;
 

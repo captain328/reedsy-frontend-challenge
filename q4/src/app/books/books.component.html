@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-6 col-md-8 col-sm-12 mx-auto bg-color-ecru-white pt-4 px-0 books-list">
-      <form class="d-flex align-items-center mb-4" [formGroup]="searchForm" (submit)="searchBooks($event)">
+      <form class="d-flex align-items-center mb-4 px-4" [formGroup]="searchForm" (submit)="searchBooks($event)">
         <label class="flex-grow-1 mb-0 mr-2">
           <input placeholder="search" type="text" formControlName="keyword" class="form-control">
         </label>

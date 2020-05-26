@@ -2,7 +2,7 @@
 node_modules
 
 # production
-# build # ignored for github static hosting
+build
 
 # misc
 .DS_Store

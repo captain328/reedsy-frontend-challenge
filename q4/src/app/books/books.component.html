@@ -8,6 +8,7 @@
         <button type="submit" [disabled]="!searchForm.valid" class="btn btn-primary text-white">Search</button>
       </form>
       <h1 class="text-primary text-center pb-2">Top books of all time</h1>
+      <div class="text-center py-3" *ngIf="!books || books.length === 0">(No books)</div>
       <reedsy-book-card *ngFor="let book of books | paginate: {
         itemsPerPage: take,
         currentPage: page,

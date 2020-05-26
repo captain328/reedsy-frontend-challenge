@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, Validators } from '@angular/forms';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { ToastrService } from 'ngx-toastr';
 
 import { Book } from '../core/models/book';
 import { PageSizeSmall } from '../core/models/paginator';
 import { BooksService } from '../core/services/books.service';
-import { ToastrService } from '../core/services/toastr.service';
 
 @Component({
   selector: 'reedsy-books',
@@ -61,7 +61,7 @@ export class BooksComponent implements OnInit {
       this.books = res.data;
       this.total = res.count;
     } catch (e) {
-      this.toastrService.error(e, 'Failed to fetch books data.');
+      this.toastrService.error('Error', 'Failed to fetch books data.');
     } finally {
       this.spinner.hide();
     }

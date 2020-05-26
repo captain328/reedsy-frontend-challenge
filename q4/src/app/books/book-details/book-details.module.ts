@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { BookDetailsRoutingModule } from './book-details-routing.module';
 import { BookDetailsComponent } from './book-details.component';
-import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [BookDetailsComponent],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     BookDetailsRoutingModule,
-    ReactiveFormsModule
   ]
 })
-export class BookDetailsModule { }
+export class BookDetailsModule {
+}

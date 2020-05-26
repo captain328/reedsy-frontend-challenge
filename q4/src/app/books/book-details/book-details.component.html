@@ -12,7 +12,7 @@
       <div class="font-italic">{{book.author}}</div>
       <div class="text-center my-4 d-flex justify-content-center">
         <div class="book-cover-wrapper overflow-hidden">
-          <img [src]="book.cover" [alt]="book.title">
+          <img class="w-100" [src]="book.cover" [alt]="book.title">
         </div>
       </div>
       <h2>Synopsis</h2>
@@ -27,7 +27,7 @@
           <div class="text-right">{{comment.author || 'Anonymous'}}</div>
         </div>
       </div>
-      <form class="w-100" [formGroup]="commentForm" (submit)="addComment($event)">
+      <form [formGroup]="commentForm" (submit)="addComment($event)">
         <label class="w-100">
           <textarea class="form-control" formControlName="comment" rows="4" placeholder="comment"></textarea>
         </label>

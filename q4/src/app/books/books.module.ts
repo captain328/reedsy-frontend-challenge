@@ -4,11 +4,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { NgxPaginationModule } from 'ngx-pagination';
 
-import { BooksComponent } from './books.component';
-import { BookCardComponent } from './book-card/book-card.component';
 import { BooksRoutingModule } from './books-routing.module';
 import { PipesModule } from '../shared/pipes/pipes.module';
-
+import { BooksComponent } from './books.component';
+import { BookCardComponent } from './book-card/book-card.component';
 
 @NgModule({
   declarations: [BooksComponent, BookCardComponent],

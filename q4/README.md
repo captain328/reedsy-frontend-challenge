@@ -1,7 +1,8 @@
 # Reedsy Frontend Engineer challenge SPA project
 
 ### Overview
-This project is for SPA assignment in reedsy frontend engineer challenge.
+SPA assignment in reedsy frontend engineer challenge. <br>
+hosted in https://captain328.github.io/reedsy-frontend-challenge/public/q4. <br>
 
 Framework: Angular 9.1
 
@@ -13,6 +14,8 @@ This project uses Typescript and SASS.
 * Books list pagination
 * Search using book title and synopsis
 * Comment feature in book details page
+* Lazy loading for books list and book details page
+
 
 The api server is modified a little for the books list pagination and search functionality.
 

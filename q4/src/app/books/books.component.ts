@@ -22,7 +22,7 @@ export class BooksComponent implements OnInit {
   take = PageSizeSmall;
 
   searchForm = this.fb.group({
-    keyword: ['', Validators.required]
+    keyword: [this.keyword || '', Validators.required]
   });
 
   constructor(

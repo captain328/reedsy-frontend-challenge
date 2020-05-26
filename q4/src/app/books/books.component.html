@@ -5,7 +5,7 @@
         <label class="flex-grow-1 mb-0 mr-2">
           <input placeholder="search" type="text" formControlName="keyword" class="form-control">
         </label>
-        <button type="submit" [disabled]="!searchForm.valid" class="btn btn-primary text-white">Search</button>
+        <button type="submit" class="btn btn-primary text-white">Search</button>
       </form>
       <h1 class="text-primary text-center pb-2">Top books of all time</h1>
       <div class="text-center py-3" *ngIf="!books || books.length === 0">(No books)</div>

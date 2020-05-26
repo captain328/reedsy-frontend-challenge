@@ -1,8 +1,18 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-6 col-md-8 col-sm-12 mx-auto bg-color-ecru-white pt-4 px-0 books-list">
+      <form class="d-flex align-items-center mb-4" [formGroup]="searchForm" (submit)="searchBooks($event)">
+        <label class="flex-grow-1 mb-0 mr-2">
+          <input placeholder="search" type="text" formControlName="keyword" class="form-control">
+        </label>
+        <button type="submit" class="btn btn-primary text-white">Search</button>
+      </form>
       <h1 class="text-primary text-center pb-2">Top books of all time</h1>
-      <reedsy-book-card *ngFor="let book of books | paginate: { itemsPerPage: take, currentPage: page, totalItems: total }; let i=index" [book]="book" [index]="i + page * take">
+      <reedsy-book-card *ngFor="let book of books | paginate: {
+        itemsPerPage: take,
+        currentPage: page,
+        totalItems: total
+      }; let i=index" [book]="book" [index]="i + ( page - 1 ) * take">
       </reedsy-book-card>
       <div class="text-center pr-40">
         <pagination-controls (pageChange)="pageChange($event)"></pagination-controls>

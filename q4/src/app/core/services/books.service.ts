@@ -15,9 +15,10 @@ export class BooksService {
     private httpClient: HttpClient
   ) { }
 
-  books(skip = 0, take = PageSizeDefault): Observable<Paginator<Book>> {
+  books(keyword, skip = 0, take = PageSizeDefault): Observable<Paginator<Book>> {
     const url = `${environment.api}/books`;
     let params = paginatorParam(skip, take);
+    params = params.append('keyword', keyword);
     return this.httpClient.get<Paginator<Book>>(url, { params });
   }
 

@@ -27,7 +27,12 @@ export class BookDetailsComponent implements OnInit {
   }
 
   toggleVote() {
-    // TODO: add toggle vote handler
+    this.book.upvoted = !this.book.upvoted;
+    if (this.book.upvoted) {
+      this.book.upvotes += 1;
+    } else {
+      this.book.upvotes -= 1;
+    }
   }
 
   addComment($event) {

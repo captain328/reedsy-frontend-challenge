@@ -25,6 +25,9 @@
 @media (max-width: 768px) {
   .featured-book {
     display: block;
+    img {
+      width: 50%;
+    }
   }
   .books-list {
     display: block;

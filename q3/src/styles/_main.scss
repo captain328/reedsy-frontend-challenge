@@ -32,7 +32,6 @@ img {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: #A0A0A0 0 0 3px;
-  height: 100%;
 }
 
 // Common
@@ -107,16 +106,17 @@ img {
   position: relative;
   padding: 25px;
   align-items: center;
+  img {
+    width: 20%;
+  }
   .book-info {
+    flex: 1 1 0;
     padding-left: 20px;
     padding-right: 20px;
     .title {
       padding-top: 10px;
       margin: 0;
     }
-  }
-  .img-container {
-    height: 400px;
   }
 }
 
@@ -140,6 +140,9 @@ img {
   background-color: #FAF9F4;
   position: relative;
   flex: 0 0 30%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   max-width: 30%;
   margin: 0.5rem;
   padding:20px 10px 10px 10px;
@@ -159,9 +162,8 @@ img {
   font-size: 16px;
 }
 
-.book .img-container {
-  height: 200px;
-  text-align: center;
+.book img {
+  width: 50%;
 }
 
 // Footer

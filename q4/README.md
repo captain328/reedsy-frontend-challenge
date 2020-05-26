@@ -40,3 +40,10 @@ npm start
 ```
 npm run build
 ```
+
+### Staging Build
+build files to be used in github hosting
+```
+npm run build:staging
+```
+(* dont forget to add newly added files to versioning)

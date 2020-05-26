@@ -16,9 +16,9 @@ This project uses Typescript and SASS.
 
 The api server is modified a little for the books list pagination and search functionality.
 
-The api documentation can be found here.
+api doc: https://github.com/captain328/reedsy-q4-api/blob/master/README.md <br>
+url: https://reedsy-q4-api.herokuapp.com
 
-https://github.com/captain328/reedsy-frontend-challenge/blob/master/q4-server/README.md
 
 ### Installation
 

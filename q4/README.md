@@ -1,4 +1,4 @@
-# Reedsy Frontend Engineer challenge SPA project
+# Reedsy Frontend Engineer Challenge SPA Project
 
 ### Overview
 SPA assignment in reedsy frontend engineer challenge. <br>

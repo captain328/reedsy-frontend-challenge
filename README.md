@@ -28,8 +28,8 @@ One way data flows are deterministic, whereas two-way binding can cause side-eff
  Without the asynchronous feature, it makes UX worse.
  
 ## 3. Styling
-live url: https://captain328.github.io/reedsy-frontend-challenge/public/q3 <br>
+live url: https://triaton.github.io/reedsy-frontend-challenge/public/q3 <br>
 repository: https://github.com/captain328/reedsy-frontend-challenge/tree/master/q3
 ## 4. SPA
-live url: https://captain328.github.io/reedsy-frontend-challenge/public/q4 <br>
+live url: https://triaton.github.io/reedsy-frontend-challenge/public/q4 <br>
 repository: https://github.com/captain328/reedsy-frontend-challenge/tree/master/q4

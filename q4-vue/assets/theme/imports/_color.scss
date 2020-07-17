@@ -1,0 +1,35 @@
+@mixin colors($property) {
+  &-anzac {
+    #{$property}: $anzac;
+  }
+  &-mandalay {
+    #{$property}: $mandalay;
+  }
+  &-mine-shaft {
+    #{$property}: $mine-shaft;
+  }
+  &-tundora {
+    #{$property}: $tundora;
+  }
+  &-dove-gray {
+    #{$property}: $dove-gray;
+  }
+  &-regent-gray {
+    #{$property}: $regent-gray;
+  }
+  &-ecru-white {
+    #{$property}: $ecru-white;
+  }
+}
+
+.color {
+  @include colors(color);
+}
+
+.bg-color {
+  @include colors(background-color);
+}
+
+.border-color {
+  @include colors(border-color);
+}

@@ -29,7 +29,7 @@ One way data flows are deterministic, whereas two-way binding can cause side-eff
  
 ## 3. Styling
 live url: https://triaton.github.io/reedsy-frontend-challenge/public/q3 <br>
-repository: https://github.com/captain328/reedsy-frontend-challenge/tree/master/q3
+repository: https://github.com/triaton/reedsy-frontend-challenge/tree/master/q3
 ## 4. SPA
 live url: https://triaton.github.io/reedsy-frontend-challenge/public/q4 <br>
-repository: https://github.com/captain328/reedsy-frontend-challenge/tree/master/q4
+repository: https://github.com/triaton/reedsy-frontend-challenge/tree/master/q4
